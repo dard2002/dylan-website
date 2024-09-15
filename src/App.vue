@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h3>{{ title }}</h3>
+  <h5>{{ subtitle }}</h5>
+  <SideBar />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SideBar from './components/SideBar.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SideBar
+  },
+  data() {
+    return {
+      title: "Dylan Armstrong",
+      subtitle: "Software/Mobile Engineer and Aspiring Researcher in the field of Software Engineering"
+    }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  position: fixed;
+  width: 75%;
+  height: 100%;
+  left:0;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #ffffff;
+  background-color: #20202020;
 }
 </style>
